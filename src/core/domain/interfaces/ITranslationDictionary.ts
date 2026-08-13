@@ -68,6 +68,16 @@ export interface ITranslationDictionary {
       };
     };
   };
+  contact: {
+    title: string;
+    cta: string;
+    emailLabel: string;
+    phoneLabel: string;
+    locationLabel: string;
+    locationValue: string;
+    linkedinLabel: string;
+    githubLabel: string;
+  };
   repos: {
     title: string;
     viewOnGithub: string;

@@ -84,6 +84,16 @@ export const pt: ITranslationDictionary = {
       },
     },
   },
+  contact: {
+    title: 'Contato',
+    cta: 'Vamos construir algo juntos.',
+    emailLabel: 'Email',
+    phoneLabel: 'Telefone / WhatsApp',
+    locationLabel: 'Localização',
+    locationValue: 'Belo Horizonte, Minas Gerais',
+    linkedinLabel: 'LinkedIn',
+    githubLabel: 'GitHub',
+  },
   repos: {
     title: 'Repositórios Dinâmicos',
     viewOnGithub: 'Ver no GitHub',

@@ -7,6 +7,7 @@ import { Skills } from './components/sections/Skills';
 import { Projects } from './components/sections/Projects';
 import { GithubRepoCarousel } from './components/sections/GithubRepoCarousel';
 import { About } from './components/sections/About';
+import { ContactSection } from './components/sections/Contact';
 
 const App: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const App: React.FC = () => {
         <Projects />
         <GithubRepoCarousel />
         <About />
+        <ContactSection />
       </main>
 
       <Footer />
