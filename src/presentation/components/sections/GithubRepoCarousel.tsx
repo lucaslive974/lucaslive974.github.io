@@ -68,7 +68,7 @@ export const GithubRepoCarousel: React.FC = () => {
           {/* Carousel Container */}
           <div 
             ref={carouselRef}
-            className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 pt-4 -mx-4 px-4 md:-mx-8 md:px-8"
+            className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 pt-4"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             <style>{`
