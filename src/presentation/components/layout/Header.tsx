@@ -1,6 +1,7 @@
 import React from 'react';
 import { useI18n } from '../../context/I18nContext';
 import { useActiveSection } from '../../hooks/useActiveSection';
+import { useScrollProgress } from '../../hooks/useScrollProgress';
 import { LanguageToggle } from '../common/LanguageToggle';
 
 const NAV_ITEMS = [
@@ -14,6 +15,7 @@ const NAV_ITEMS = [
 export const Header: React.FC = () => {
   const { t } = useI18n();
   const activeSection = useActiveSection(NAV_ITEMS.map((item) => item.id));
+  const scrollProgress = useScrollProgress();
 
   const scrollTo = (id: string) => {
     const element = document.getElementById(id);
@@ -55,6 +57,14 @@ export const Header: React.FC = () => {
         <div className="flex items-center space-x-4">
           <LanguageToggle />
         </div>
+      </div>
+      
+      {/* Scroll Progress Indicator */}
+      <div className="absolute bottom-0 left-0 h-[2px] w-full bg-zinc-900/50">
+        <div 
+          className="h-full bg-indigo-500 transition-none"
+          style={{ width: `${scrollProgress}%` }}
+        />
       </div>
     </header>
   );
