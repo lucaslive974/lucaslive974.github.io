@@ -9,9 +9,31 @@
   html {
     scroll-behavior: smooth;
     color-scheme: dark;
+    /* Firefox Scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: #374151 transparent;
   }
   
   body {
     @apply bg-zinc-950 text-zinc-100 font-sans antialiased selection:bg-indigo-500/30;
+  }
+
+  /* Webkit Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #374151;
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4B5563;
   }
 }
