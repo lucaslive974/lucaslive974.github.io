@@ -13,28 +13,28 @@ export const Experience: React.FC = () => {
       
       <div className="grid md:grid-cols-2 gap-8">
         <Card className="relative overflow-hidden group">
-          <div className="absolute top-0 right-0 p-6 text-zinc-800 group-hover:text-indigo-500/20 transition-colors">
+          <div className="absolute top-0 right-0 p-6 text-zinc-800 group-hover:text-primary/20 transition-colors">
             <GitPullRequest size={64} />
           </div>
           <div className="relative z-10">
-            <h3 className="text-xl font-bold text-zinc-100">{t.experience.oss.title}</h3>
-            <p className="text-indigo-400 font-medium mt-1">{t.experience.oss.role}</p>
+            <h3 className="text-xl font-bold text-text-main">{t.experience.oss.title}</h3>
+            <p className="text-primary font-medium mt-1">{t.experience.oss.role}</p>
             <p className="text-sm text-zinc-500 mt-1 mb-4">{t.experience.oss.period}</p>
-            <p className="text-zinc-400 leading-relaxed">
+            <p className="text-text-muted leading-relaxed">
               {t.experience.oss.description}
             </p>
           </div>
         </Card>
 
         <Card className="relative overflow-hidden group">
-          <div className="absolute top-0 right-0 p-6 text-zinc-800 group-hover:text-indigo-500/20 transition-colors">
+          <div className="absolute top-0 right-0 p-6 text-zinc-800 group-hover:text-primary/20 transition-colors">
             <Briefcase size={64} />
           </div>
           <div className="relative z-10">
-            <h3 className="text-xl font-bold text-zinc-100">{t.experience.work.title}</h3>
-            <p className="text-indigo-400 font-medium mt-1">{t.experience.work.role}</p>
+            <h3 className="text-xl font-bold text-text-main">{t.experience.work.title}</h3>
+            <p className="text-primary font-medium mt-1">{t.experience.work.role}</p>
             <p className="text-sm text-zinc-500 mt-1 mb-4">{t.experience.work.period}</p>
-            <p className="text-zinc-400 leading-relaxed">
+            <p className="text-text-muted leading-relaxed">
               {t.experience.work.description}
             </p>
           </div>

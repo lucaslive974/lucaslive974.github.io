@@ -8,7 +8,7 @@ interface AvatarProps {
 
 export const Avatar: React.FC<AvatarProps> = ({ src, alt, className = '' }) => {
   return (
-    <div className={`relative rounded-full overflow-hidden border-4 border-zinc-800/50 shadow-2xl ${className}`}>
+    <div className={`relative rounded-full overflow-hidden border-4 border-border/50 shadow-2xl ${className}`}>
       <img
         src={src}
         alt={alt}

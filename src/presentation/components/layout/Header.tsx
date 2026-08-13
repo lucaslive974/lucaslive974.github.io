@@ -34,9 +34,9 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800">
+    <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <div className="text-xl font-bold text-zinc-100 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+        <div className="text-xl font-bold text-text-main cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           LR.
         </div>
         
@@ -45,8 +45,8 @@ export const Header: React.FC = () => {
             <button
               key={id}
               onClick={() => scrollTo(id)}
-              className={`text-sm font-medium transition-colors hover:text-indigo-400 ${
-                activeSection === id ? 'text-indigo-400' : 'text-zinc-400'
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                activeSection === id ? 'text-primary' : 'text-text-muted'
               }`}
             >
               {t.nav[labelKey]}
@@ -60,9 +60,9 @@ export const Header: React.FC = () => {
       </div>
       
       {/* Scroll Progress Indicator */}
-      <div className="absolute bottom-0 left-0 h-[2px] w-full bg-zinc-900/50">
+      <div className="absolute bottom-0 left-0 h-[2px] w-full bg-surface/50">
         <div 
-          className="h-full bg-indigo-500 transition-none"
+          className="h-full bg-primary transition-none"
           style={{ width: `${scrollProgress}%` }}
         />
       </div>

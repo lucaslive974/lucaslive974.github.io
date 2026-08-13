@@ -23,7 +23,7 @@ export const Projects: React.FC = () => {
           <div className={`p-2 rounded-lg ${colorBgClass} ${colorTextClass}`}>
             <Icon size={28} />
           </div>
-          <h3 className="text-2xl font-bold text-zinc-100">{project.name}</h3>
+          <h3 className="text-2xl font-bold text-text-main">{project.name}</h3>
         </div>
         {project.url && (
           <a 
@@ -40,7 +40,7 @@ export const Projects: React.FC = () => {
       
       <div className="grid md:grid-cols-2 gap-8 mt-4">
         <div className="flex flex-col">
-          <p className="text-zinc-400 text-base leading-relaxed mb-6 flex-grow">
+          <p className="text-text-muted text-base leading-relaxed mb-6 flex-grow">
             {project.description}
           </p>
           <div className="flex flex-wrap gap-2 mb-6 md:mb-0">
@@ -52,21 +52,21 @@ export const Projects: React.FC = () => {
           </div>
         </div>
         
-        <div className="bg-zinc-950/50 rounded-xl p-6 border border-zinc-800/80 shadow-inner">
-          <h4 className="text-zinc-100 font-semibold mb-4 flex items-center">
+        <div className="bg-background/50 rounded-xl p-6 border border-border/80 shadow-inner">
+          <h4 className="text-text-main font-semibold mb-4 flex items-center">
             <span className="bg-zinc-800 text-xs px-2 py-1 rounded text-zinc-300 mr-3 uppercase tracking-wider font-bold">Details</span>
             Architecture
           </h4>
           <ul className="space-y-3 mb-6">
             {project.features.map((feature: string, i: number) => (
-              <li key={i} className="flex items-start space-x-3 text-zinc-400 text-sm">
+              <li key={i} className="flex items-start space-x-3 text-text-muted text-sm">
                 <CheckCircle2 size={18} className={`${colorTextClass} shrink-0 mt-0.5`} />
                 <span>{feature}</span>
               </li>
             ))}
           </ul>
           
-          <div className="flex items-start space-x-3 text-zinc-500 text-sm p-4 bg-zinc-900/50 rounded-lg border border-zinc-800/50 border-l-2 border-l-zinc-700">
+          <div className="flex items-start space-x-3 text-zinc-500 text-sm p-4 bg-surface/50 rounded-lg border border-border/50 border-l-2 border-l-zinc-700">
             <CircleDashed size={18} className="shrink-0 mt-0.5 text-zinc-600" />
             <span className="italic">{project.todo}</span>
           </div>
@@ -85,9 +85,9 @@ export const Projects: React.FC = () => {
         {renderHeroProject(
           orionGl,
           Box,
-          'text-indigo-400',
-          'border-indigo-500/20 hover:border-indigo-500/40',
-          'bg-indigo-500/10'
+          'text-primary',
+          'border-primary/20 hover:border-primary/40',
+          'bg-primary/10'
         )}
 
         {/* Bonfire - Hero Project */}
@@ -106,9 +106,9 @@ export const Projects: React.FC = () => {
               <div className="p-2 bg-emerald-500/10 rounded-lg text-emerald-400">
                 <TerminalSquare size={24} />
               </div>
-              <h3 className="text-xl font-bold text-zinc-100">{codeX.name}</h3>
+              <h3 className="text-xl font-bold text-text-main">{codeX.name}</h3>
             </div>
-            <p className="text-zinc-400 text-sm leading-relaxed mb-6 flex-grow">
+            <p className="text-text-muted text-sm leading-relaxed mb-6 flex-grow">
               {codeX.description}
             </p>
             <div className="flex flex-wrap gap-2">
@@ -126,9 +126,9 @@ export const Projects: React.FC = () => {
               <div className="p-2 bg-cyan-500/10 rounded-lg text-cyan-400">
                 <FileSearch size={24} />
               </div>
-              <h3 className="text-xl font-bold text-zinc-100">{gaia.name}</h3>
+              <h3 className="text-xl font-bold text-text-main">{gaia.name}</h3>
             </div>
-            <p className="text-zinc-400 text-sm leading-relaxed mb-6 flex-grow">
+            <p className="text-text-muted text-sm leading-relaxed mb-6 flex-grow">
               {gaia.description}
             </p>
             <div className="flex flex-wrap gap-2">

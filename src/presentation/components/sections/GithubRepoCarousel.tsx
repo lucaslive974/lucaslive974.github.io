@@ -39,9 +39,9 @@ export const GithubRepoCarousel: React.FC = () => {
       {loading && (
         <div className="flex justify-center py-12">
           <div className="animate-pulse flex space-x-2">
-            <div className="w-3 h-3 bg-indigo-500 rounded-full"></div>
-            <div className="w-3 h-3 bg-indigo-500 rounded-full animation-delay-200"></div>
-            <div className="w-3 h-3 bg-indigo-500 rounded-full animation-delay-400"></div>
+            <div className="w-3 h-3 bg-primary rounded-full"></div>
+            <div className="w-3 h-3 bg-primary rounded-full animation-delay-200"></div>
+            <div className="w-3 h-3 bg-primary rounded-full animation-delay-400"></div>
           </div>
         </div>
       )}
@@ -51,7 +51,7 @@ export const GithubRepoCarousel: React.FC = () => {
           {/* Navigation Arrows */}
           <button 
             onClick={scrollLeft}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-6 z-10 p-2 bg-zinc-900 border border-zinc-700 rounded-full text-zinc-400 hover:text-white hover:border-indigo-500 hover:bg-zinc-800 transition-all shadow-xl hidden md:flex opacity-0 group-hover:opacity-100"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-6 z-10 p-2 bg-surface border border-zinc-700 rounded-full text-text-muted hover:text-white hover:border-primary hover:bg-zinc-800 transition-all shadow-xl hidden md:flex opacity-0 group-hover:opacity-100"
             aria-label="Scroll left"
           >
             <ChevronLeft size={24} />
@@ -59,7 +59,7 @@ export const GithubRepoCarousel: React.FC = () => {
           
           <button 
             onClick={scrollRight}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-6 z-10 p-2 bg-zinc-900 border border-zinc-700 rounded-full text-zinc-400 hover:text-white hover:border-indigo-500 hover:bg-zinc-800 transition-all shadow-xl hidden md:flex opacity-0 group-hover:opacity-100"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-6 z-10 p-2 bg-surface border border-zinc-700 rounded-full text-text-muted hover:text-white hover:border-primary hover:bg-zinc-800 transition-all shadow-xl hidden md:flex opacity-0 group-hover:opacity-100"
             aria-label="Scroll right"
           >
             <ChevronRight size={24} />
@@ -86,26 +86,26 @@ export const GithubRepoCarousel: React.FC = () => {
                   href={repo.html_url} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="block h-full outline-none focus:ring-2 focus:ring-indigo-500 rounded-xl"
+                  className="block h-full outline-none focus:ring-2 focus:ring-primary rounded-xl"
                   aria-label={`View ${repo.name} on GitHub`}
                 >
                   <Card className="flex flex-col h-[260px] group/card hover:bg-zinc-800/50 transition-colors">
                     <div className="flex justify-between items-start mb-4">
-                      <h3 className="text-lg font-bold text-zinc-100 group-hover/card:text-indigo-400 transition-colors truncate">
+                      <h3 className="text-lg font-bold text-text-main group-hover/card:text-primary transition-colors truncate">
                         {repo.name}
                       </h3>
-                      <ExternalLink size={16} className="text-zinc-600 group-hover/card:text-indigo-400 transition-colors shrink-0 ml-2" />
+                      <ExternalLink size={16} className="text-zinc-600 group-hover/card:text-primary transition-colors shrink-0 ml-2" />
                     </div>
                     
-                    <p className="text-sm text-zinc-400 line-clamp-3 mb-6 flex-grow">
+                    <p className="text-sm text-text-muted line-clamp-3 mb-6 flex-grow">
                       {repo.description || 'No description available'}
                     </p>
                     
-                    <div className="flex items-center justify-between text-xs text-zinc-500 mt-auto pt-4 border-t border-zinc-800/50">
+                    <div className="flex items-center justify-between text-xs text-zinc-500 mt-auto pt-4 border-t border-border/50">
                       <div className="flex items-center space-x-4">
                         {repo.language && (
                           <div className="flex items-center space-x-1.5">
-                            <span className="w-2.5 h-2.5 rounded-full bg-indigo-500"></span>
+                            <span className="w-2.5 h-2.5 rounded-full bg-primary"></span>
                             <span>{repo.language}</span>
                           </div>
                         )}

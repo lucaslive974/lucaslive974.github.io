@@ -14,17 +14,17 @@ interface ContactCardProps {
 const ContactCard: React.FC<ContactCardProps> = ({ icon: Icon, label, value, href }) => {
   const content = (
     <>
-      <div className="flex items-center justify-center p-4 bg-indigo-500/10 text-indigo-400 rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300">
+      <div className="flex items-center justify-center p-4 bg-primary/10 text-primary rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300">
         <Icon size={32} />
       </div>
-      <h3 className="text-zinc-400 text-sm mb-2">{label}</h3>
-      <p className="text-zinc-100 font-semibold text-center group-hover:text-indigo-400 transition-colors w-full break-all px-2">
+      <h3 className="text-text-muted text-sm mb-2">{label}</h3>
+      <p className="text-text-main font-semibold text-center group-hover:text-primary transition-colors w-full break-all px-2">
         {value}
       </p>
     </>
   );
 
-  const containerClasses = "flex flex-col items-center justify-center p-6 h-full group bg-zinc-900/50 hover:bg-zinc-800/80 border border-zinc-800 hover:border-indigo-500/50 transition-all rounded-2xl";
+  const containerClasses = "flex flex-col items-center justify-center p-6 h-full group bg-surface/50 hover:bg-zinc-800/80 border border-border hover:border-primary/50 transition-all rounded-2xl";
 
   if (href) {
     return (
@@ -57,17 +57,17 @@ export const ContactSection: React.FC = () => {
       <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Left Column: CTA & Location */}
         <div className="space-y-8">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-zinc-100 tracking-tight leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text-main tracking-tight leading-tight">
             {contact.cta}
           </h2>
           
-          <div className="flex items-center space-x-4 text-zinc-400 p-4 bg-zinc-900/30 rounded-2xl border border-zinc-800/50 w-fit">
-            <div className="p-3 bg-indigo-500/10 text-indigo-400 rounded-xl">
+          <div className="flex items-center space-x-4 text-text-muted p-4 bg-surface/30 rounded-2xl border border-border/50 w-fit">
+            <div className="p-3 bg-primary/10 text-primary rounded-xl">
               <MapPin size={24} />
             </div>
             <div>
               <p className="text-sm font-medium">{contact.locationLabel}</p>
-              <p className="text-zinc-100 font-semibold">{contact.locationValue}</p>
+              <p className="text-text-main font-semibold">{contact.locationValue}</p>
             </div>
           </div>
         </div>

@@ -10,19 +10,19 @@ export const Hero: React.FC = () => {
     <section className="min-h-[80vh] flex flex-col justify-center pt-20">
       <div className="flex flex-col-reverse md:flex-row md:items-center justify-between gap-12">
         <div className="space-y-6 flex-1">
-          <p className="text-indigo-400 font-mono text-lg">{t.hero.greeting}</p>
-          <h1 className="text-5xl md:text-7xl font-bold text-zinc-100 tracking-tight">
+          <p className="text-primary font-mono text-lg">{t.hero.greeting}</p>
+          <h1 className="text-5xl md:text-7xl font-bold text-text-main tracking-tight">
             {t.hero.title}.
           </h1>
-          <p className="text-xl md:text-2xl text-zinc-400 max-w-2xl leading-relaxed">
+          <p className="text-xl md:text-2xl text-text-muted max-w-2xl leading-relaxed">
             {t.hero.subtitle}
           </p>
           
           <div className="flex space-x-6 pt-8">
-            <a href="https://github.com/lucaslive974" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-indigo-400 transition-colors">
+            <a href="https://github.com/lucaslive974" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors">
               <Code2 size={28} />
             </a>
-            <a href="https://linkedin.com/in/lucas-ribeiro-lima40" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-indigo-400 transition-colors">
+            <a href="https://linkedin.com/in/lucas-ribeiro-lima40" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-primary transition-colors">
               <UserCircle2 size={28} />
             </a>
           </div>

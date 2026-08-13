@@ -11,7 +11,7 @@ import { ContactSection } from './components/sections/Contact';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-zinc-950">
+    <div className="min-h-screen bg-background">
       <Header />
       
       <main className="max-w-6xl mx-auto px-6">
