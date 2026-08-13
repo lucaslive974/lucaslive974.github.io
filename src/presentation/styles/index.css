@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Fira Code', monospace;
+  --font-mono: 'Fira Code', monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+  
+  body {
+    @apply bg-zinc-950 text-zinc-100 font-sans antialiased selection:bg-indigo-500/30;
+  }
+}
