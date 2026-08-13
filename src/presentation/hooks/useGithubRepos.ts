@@ -6,6 +6,7 @@ import { GithubService } from '../../core/infrastructure/services/GithubService'
 export const useGithubRepos = (username: string) => {
   const [repos, setRepos] = useState<GithubRepo[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+  const [isError, setIsError] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -16,6 +17,7 @@ export const useGithubRepos = (username: string) => {
         const data = await githubService.getRepositories(username);
         setRepos(data);
       } catch (err) {
+        setIsError(true);
         setError(err instanceof Error ? err.message : 'Unknown error');
       } finally {
         setLoading(false);
@@ -25,5 +27,5 @@ export const useGithubRepos = (username: string) => {
     fetchRepos();
   }, [username]);
 
-  return { repos, loading, error };
+  return { repos, loading, isError, error };
 };

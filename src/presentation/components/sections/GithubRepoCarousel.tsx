@@ -7,7 +7,7 @@ import { Star, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export const GithubRepoCarousel: React.FC = () => {
   const { t } = useI18n();
-  const { repos, loading, error } = useGithubRepos('lucaslive974');
+  const { repos, loading, isError } = useGithubRepos('lucaslive974');
   const carouselRef = useRef<HTMLDivElement>(null);
 
   const scrollLeft = () => {
@@ -28,6 +28,10 @@ export const GithubRepoCarousel: React.FC = () => {
     return new Intl.DateTimeFormat('en-US', { month: 'short', year: 'numeric' }).format(date);
   };
 
+  if (isError || (!loading && repos.length === 0)) {
+    return null;
+  }
+
   return (
     <section id="repos" className="py-20 scroll-mt-16">
       <SectionHeader title={t.repos.title} />
@@ -42,13 +46,7 @@ export const GithubRepoCarousel: React.FC = () => {
         </div>
       )}
 
-      {error && (
-        <div className="text-red-400 p-4 bg-red-950/20 rounded-lg border border-red-900/50 text-center">
-          Failed to load repositories: {error}
-        </div>
-      )}
-
-      {!loading && !error && (
+      {!loading && (
         <div className="relative group">
           {/* Navigation Arrows */}
           <button 
