@@ -1,32 +1,88 @@
-# React + TypeScript + Vite
+# Lucas Ribeiro - Software Engineer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+![Portfolio Preview](./public/my_photo.jpg)
 
-Currently, two official plugins are available:
+Welcome to the source code of my personal portfolio website! This project is a highly optimized, responsive Single Page Application (SPA) designed to showcase my skills, experience, and flagship open-source projects.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Live Demo
+Visit the live site: [https://lucaslive974.github.io](https://lucaslive974.github.io) *(Replace with actual URL if different)*
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Clean Architecture & SOLID Principles**: The codebase is strictly organized into Domain, Infrastructure, and Presentation layers, ensuring modularity, scalability, and strict separation of concerns.
+- **Dynamic GitHub Repositories**: Fetches, filters (excluding forks), and sorts my GitHub repositories in real-time, displayed in a native CSS horizontal snap carousel.
+- **Internationalization (i18n)**: Fully supported English (EN) and Portuguese (PT) context-driven translation system with zero external i18n dependencies.
+- **Exclusive Dark Mode**: Carefully crafted color palettes, CSS filters, and modern typography (Fira Code) tailored specifically for a premium dark mode experience.
+- **Responsive & Accessible**: Native CSS `snap-x` mechanics, semantic HTML, and fluid layouts built with Tailwind CSS.
 
-## Expanding the Oxlint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+- **Framework**: React 18
+- **Language**: TypeScript (Strict Mode)
+- **Build Tool**: Vite (Lightning fast HMR & optimizations)
+- **Styling**: Tailwind CSS v4
+- **Icons**: Lucide React
+- **Hosting**: GitHub Pages
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+## 📐 Architecture Overview
+
+```text
+src/
+├── core/
+│   ├── domain/           # Interfaces and Types (e.g., IGithubService, IHttpClient)
+│   └── infrastructure/   # Concrete Implementations (e.g., GithubService, FetchHttpClient)
+├── presentation/
+│   ├── components/       # UI Components (Common, Layout, Sections)
+│   ├── context/          # React Contexts (I18nContext)
+│   ├── hooks/            # Custom Hooks (useGithubRepos, useActiveSection)
+│   ├── i18n/             # Translation Dictionaries (EN, PT)
+│   ├── styles/           # Tailwind Entry & Base CSS
+│   └── App.tsx           # Application Root
+└── main.tsx
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## ⚙️ Getting Started
+
+To run this project locally, follow these steps:
+
+### Prerequisites
+- Node.js (v18+)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/lucaslive974/lucaslive974.github.io.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd lucaslive974.github.io
+   ```
+
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+5. Open your browser and visit `http://localhost:5173`.
+
+### Build for Production
+To generate a production-ready build:
+```bash
+npm run build
+```
+The optimized files will be output to the `dist/` directory.
+
+## 🤝 Contact
+
+- GitHub: [@lucaslive974](https://github.com/lucaslive974)
+- LinkedIn: [lucas-ribeiro-lima40](https://linkedin.com/in/lucas-ribeiro-lima40)
+- Discord: @lucasrl7
+
