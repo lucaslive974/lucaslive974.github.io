@@ -100,7 +100,7 @@ export const en: ITranslationDictionary = {
   },
   about: {
     title: 'About Me',
-    education: 'B.Eng. in Software Engineering from Unicesumar (2024) and CS50x from HarvardX (2026).',
-    personal: 'Away from the keyboard, I enjoy challenging myself with things like chess and getting lost in fantasy shows.',
+    education: { title: 'Education', desc: 'B.Eng. in Software Engineering from Unicesumar (2024) and CS50x from HarvardX (2026).' },
+    personal: { title: 'Beyond the code', desc: 'Away from the keyboard, I enjoy challenging myself with things like chess and getting lost in fantasy shows.' },
   },
 };

@@ -9,26 +9,26 @@ export const About: React.FC = () => {
   return (
     <section id="about" className="py-20 scroll-mt-16">
       <SectionHeader title={t.about.title} />
-      
+
       <div className="bg-surface border border-border rounded-xl p-8 md:p-12">
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <div className="flex items-center space-x-3 mb-6">
               <GraduationCap className="text-primary" size={24} />
-              <h3 className="text-xl font-bold text-text-main">Education</h3>
+              <h3 className="text-xl font-bold text-text-main">{t.about.education.title}</h3>
             </div>
             <p className="text-text-muted leading-relaxed text-lg">
-              {t.about.education}
+              {t.about.education.desc}
             </p>
           </div>
-          
+
           <div>
             <div className="flex items-center space-x-3 mb-6">
               <Coffee className="text-primary" size={24} />
-              <h3 className="text-xl font-bold text-text-main">Beyond the Code</h3>
+              <h3 className="text-xl font-bold text-text-main">{t.about.personal.title}</h3>
             </div>
             <p className="text-text-muted leading-relaxed text-lg">
-              {t.about.personal}
+              {t.about.personal.desc}
             </p>
           </div>
         </div>

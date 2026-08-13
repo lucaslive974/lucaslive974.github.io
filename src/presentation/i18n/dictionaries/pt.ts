@@ -100,7 +100,7 @@ export const pt: ITranslationDictionary = {
   },
   about: {
     title: 'Sobre Mim',
-    education: 'Bacharelado em Engenharia de Software pela Unicesumar (2024) e CS50x pela HarvardX (2026).',
-    personal: 'Longe do teclado, gosto de me desafiar com o xadrez e me perder em séries de fantasia.',
+    education: { title: 'Formação', desc: 'Bacharelado em Engenharia de Software pela Unicesumar (2024) e CS50x pela HarvardX (2026).' },
+    personal: { title: 'Além do código', desc: 'Longe do teclado, gosto de me desafiar com o xadrez e me perder em séries de fantasia.' },
   },
 };

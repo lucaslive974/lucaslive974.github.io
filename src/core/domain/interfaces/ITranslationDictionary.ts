@@ -84,7 +84,13 @@ export interface ITranslationDictionary {
   };
   about: {
     title: string;
-    education: string;
-    personal: string;
+    education: {
+      title: string,
+      desc: string
+    };
+    personal: {
+      title: string,
+      desc: string,
+    }
   };
 }
